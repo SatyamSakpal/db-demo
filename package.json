@@ -2,11 +2,12 @@
   "name": "db-demonstration",
   "version": "1.0.0",
   "description": "Demonstrating the working of some DBs",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon /index.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
-  "author": "",
+  "author": "Satyam Sakpal",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
