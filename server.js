@@ -1,10 +1,10 @@
-
 const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path');
 const process = require('process')
 const cors = require('cors');
 const app = express()
+require('dotenv').config();
 
 app.use(cors());
 app.use(express.json());
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
   });
 
-mongoose.connect(process.env.DBURL)
+mongoose.connect(process.env.DBURL) 
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('MongoDB connection error:', err));
 
